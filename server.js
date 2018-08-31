@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('./dist/first-app'));
 
 app.get('/*', function (req, res) {
-
+    console.log('Path ' + __dirname + '/dist/first-app/index.html');
     res.sendFile(path.join(__dirname + '/dist/first-app/index.html'));
 });
 
